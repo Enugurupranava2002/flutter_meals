@@ -15,6 +15,7 @@ class FinishYourMealScreen extends StatefulWidget {
 
 class _FinishYourMealScreenState extends State<FinishYourMealScreen> {
   bool isPlay = false;
+  bool isPause = false;
 
   @override
   Widget build(BuildContext context) {
@@ -100,12 +101,15 @@ class _FinishYourMealScreenState extends State<FinishYourMealScreen> {
                   width: 350.0,
                   height: 50.0,
                   child: ElevatedButton(
-                    onPressed: () => {},
+                    onPressed: () {
+                      setState(() => {isPause = !isPause});
+                    },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.greenAccent),
-                    child: const Text(
-                      "PAUSE",
-                      style: TextStyle(fontSize: 20.0, color: Colors.black),
+                    child: Text(
+                      isPause ? "START" : "PAUSE",
+                      style:
+                          const TextStyle(fontSize: 20.0, color: Colors.black),
                     ),
                   ),
                 ),

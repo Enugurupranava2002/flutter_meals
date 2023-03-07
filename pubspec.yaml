@@ -32,7 +32,6 @@ dependencies:
   flutter:
     sdk: flutter
   step_progress_indicator:
-  assets_audio_player:
 
 
   # The following adds the Cupertino Icons font to your application.

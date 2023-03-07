@@ -84,7 +84,7 @@ class _NomScreenState extends State<NomScreen> {
             const Padding(padding: EdgeInsets.symmetric(vertical: 10.0)),
             CustomTimer(
               duration: 30,
-              isPause: isPause,
+              isPause: false,
               routeName: BreakTimeScreen.routeName,
             ),
             MusicSwitch(

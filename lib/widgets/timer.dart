@@ -8,7 +8,10 @@ class CustomTimer extends StatefulWidget {
   final String routeName;
 
   CustomTimer(
-      {required this.duration, required this.isPause, required this.routeName});
+      {super.key,
+      required this.duration,
+      required this.isPause,
+      required this.routeName});
 
   @override
   _TimerState createState() => _TimerState();
@@ -61,6 +64,9 @@ class _TimerState extends State<CustomTimer> with TickerProviderStateMixin {
       );
     _animationController.forward();
     _timerCountController.forward();
+
+    print("init State");
+    print(widget.isPause);
 
     if (widget.isPause) {
       _animationController.stop();
